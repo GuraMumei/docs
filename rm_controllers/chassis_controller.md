@@ -63,7 +63,7 @@ npos可以表示string的结束位子，是string::type_size 类型的，也就�
   XmlRpc::XmlRpcValue q, r;
 ```
 
-利用ROS自带的XmlRpc::XmlRpcValue可以实现一维数组或者二位数组等类似json数据的读取
+利用ROS自带的XmlRpc::XmlRpcValue可以实现一维数组或者二维数组等类似json数据的读取
 
 C++代码实现如下
 

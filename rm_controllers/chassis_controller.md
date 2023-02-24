@@ -89,5 +89,6 @@ scanners:
 ```
 
 
-#3. others
-##1. 注意在moveJoint函数中的setCommand()、update()是定义在ointVelocityController中的默认函数，使用时要先先调用 setCommand() 函数确保速度指令已经保存在缓冲区中，然后再调用 update() 函数将指令应用到实际的硬件上。
+# 3. others
+
+注意在moveJoint函数中的setCommand()、update()是定义在ointVelocityController中的默认函数，使用时要先先调用 setCommand() 函数确保速度指令已经保存在缓冲区中，然后再调用 update() 函数将指令应用到实际的硬件上。

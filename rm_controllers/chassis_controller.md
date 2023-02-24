@@ -87,3 +87,7 @@ scanners:
 - { pub_topic: "scan_middle",frame_id: "laser_scanner_link_middle",server_ip: "192.168.167.101",server_port: 2111}
 - {pub_topic: "scan_tail",frame_id: "laser_scanner_link_tail",server_ip: "192.168.167.102",server_port: 2111}
 ```
+
+
+#3. others
+##1. 注意在moveJoint函数中的setCommand()、update()是定义在ointVelocityController中的默认函数，使用时要先先调用 setCommand() 函数确保速度指令已经保存在缓冲区中，然后再调用 update() 函数将指令应用到实际的硬件上。

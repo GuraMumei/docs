@@ -80,12 +80,12 @@ roscore
 mon launch rm_config rm_hw.launch
 ```
 
-- 使用manual
+- ~~使用manual
 
   - 第三个终端
 
   ```
-  mon launch rm_config manual.launch
+  ~~mon launch rm_config manual.launch~~
   ```
 
   - 第四个终端

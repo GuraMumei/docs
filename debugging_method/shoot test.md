@@ -84,15 +84,15 @@ mon launch rm_config rm_hw.launch
 
   - 第三个终端
 
-  ~~
-  mon launch rm_config manual.launch
-  ~~
+  
+  ~~mon launch rm_config manual.launch~~
+  
 
   - 第四个终端
 
-  ~~
-  mon launch rm_dbus rm_dbus
-  ~~
+  
+  ~~mon launch rm_dbus rm_dbus~~
+  
 
 - 使用rqt
 

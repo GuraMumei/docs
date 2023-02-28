@@ -6,7 +6,8 @@
 定义一个长方体
 
 ## 1. URDF文件
-```<geometry>
+```
+<geometry>
   <box size="1.0 0.5 0.2"/>
 </geometry>
 ```

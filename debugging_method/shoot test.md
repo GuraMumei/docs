@@ -58,7 +58,7 @@ mon launch rm_bringup start.launch
 1. 注释.bashrc以下一行
 
 ```
-export ROS_MASTER_URI=*http://192.168.1.101:11311*
+export ROS_MASTER_URI=http://192.168.1.101:11311
 ```
 
 2. 在.bashrc中添加环境变量

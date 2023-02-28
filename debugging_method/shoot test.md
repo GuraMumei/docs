@@ -38,7 +38,7 @@ mon launch rm_config load_controller.launch  //加载控制器
 
 - plugin -> Topics -> Message Publisher
   - 在上方选中话题，/controller/shooter_controller/command，点+号
-  - 点开话题，mode：1为stop、2为ready、3为push；speed的值对应的弹速从rm_control/rm_msg/Shootmsg查看（要根据当前机器人的射速上限选对应的speed，并且参数文件中也要有对应射速的摩擦轮转速）；hz为拨盘拨的频率
+  - 点开话题，mode：0为stop、1为ready、2为push；speed的值对应的弹速从rm_control/rm_msg/Shootmsg查看（要根据当前机器人的射速上限选对应的speed，并且参数文件中也要有对应射速的摩擦轮转速）；hz为拨盘拨的频率
   - 注意：一定先进ready再进push，这样urdf中设置的拨盘offset才会生效
 
 ## 2. method 2(manual)
@@ -58,7 +58,7 @@ mon launch rm_bringup start.launch
 1. 注释.bashrc以下一行
 
 ```
-export ROS_MASTER_URI=http://192.168.1.101:11311
+export ROS_MASTER_URI=*http://192.168.1.101:11311*
 ```
 
 2. 在.bashrc中添加环境变量
@@ -91,7 +91,7 @@ mon launch rm_config rm_hw.launch
   - 第四个终端
 
   
-  ~~mon launch rm_dbus rm_dbus~~
+  ~~rosrun rm_dbus rm_dbus~~
   
 
 - 使用rqt

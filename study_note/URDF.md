@@ -3,7 +3,29 @@
 1. urdf是机器人的描述文件，gazebo中加载的仿真机器人是根据urdf加载的
 2. 发布tf的时候也要通过urdf来得到坐标系名称、位置以及不同坐标系之间的关系
 
-## 1. xacro基本使用
+定义一个长方体
+
+## 1. URDF文件
+<geometry>
+  <box size="1.0 0.5 0.2"/>
+</geometry>
+定义一个圆柱体
+
+<geometry>
+  <cylinder length="1.0" radius="0.3"/>
+</geometry>
+定义一个球体
+
+<geometry>
+  <sphere radius="0.5"/>
+</geometry>
+定义一个三维模型
+
+<geometry>
+  <mesh filename="package://my_robot/meshes/my_model.stl" scale="0.001 0.001 0.001"/>
+</geometry>
+
+## 2. xacro基本使用
 
 1.  **xacro:propetry** (解决属性封装问题) 
 
@@ -26,7 +48,7 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 进入xacro所在目录，执行命令：rosrun xacro xacro xxx.xacro > xxx.urdf，可以把xacro解析为urdf
 ```
 
-## 2. xacro语法详解
+## 3. xacro语法详解
 
 ### 1. xmlns
 
@@ -76,7 +98,7 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 <xacro:include filename="文件名" />
 ```
 
-## 3. xacro完整使用
+## 4. xacro完整使用
 
 1. 编写xacro文件
 2. xacro文件集成到launch文件

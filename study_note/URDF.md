@@ -6,25 +6,28 @@
 定义一个长方体
 
 ## 1. URDF文件
-<geometry>
+```<geometry>
   <box size="1.0 0.5 0.2"/>
 </geometry>
+```
 定义一个圆柱体
-
+```
 <geometry>
   <cylinder length="1.0" radius="0.3"/>
 </geometry>
+```
 定义一个球体
-
+```
 <geometry>
   <sphere radius="0.5"/>
 </geometry>
+```
 定义一个三维模型
-
+```
 <geometry>
   <mesh filename="package://my_robot/meshes/my_model.stl" scale="0.001 0.001 0.001"/>
 </geometry>
-
+```
 ## 2. xacro基本使用
 
 1.  **xacro:propetry** (解决属性封装问题) 

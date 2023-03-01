@@ -137,7 +137,7 @@ eg:
 ## 4.标签
 
 1. about tag "<safety_controller>"
-
+定义在joint下的标签
    - eg：
 
    ```xml

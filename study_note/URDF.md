@@ -112,6 +112,8 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 
 1. 编写xacro文件
 2. xacro文件集成到launch文件
+
+
 eg:
 
 ### 1.先将xacro文件转换为urdf文件，然后集成urdf文件。

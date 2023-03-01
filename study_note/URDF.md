@@ -163,8 +163,20 @@ eg:
 2. <xacro:if > ... </ xacro:if>：相当于if判断
 
 ## 6. Transmission
+eg:
 
-![](/home/chen/Pictures/2022-04-07 20-01-46 的屏幕截图.png)
+```
+<transmission name="trans_trigger_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <actuator name="trigger_joint_motor">
+            <mechanicalReduction>-2.5</mechanicalReduction>
+        </actuator>
+        <joint name="trigger_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <offset>0.3</offset>
+        </joint>
+</transmission>
+ 
 
 1. <transmisson name="xxx">:指定transmission的名字
 
@@ -179,10 +191,10 @@ eg:
    transmission加载到gazebo时，这个tag的值EffortJointInterface；
 
    transimission加载到RobotHW时，值为hardware_interface/EffortJointInterface
-
-6. <offset>...</offset>：补偿量，
+6. <joint name="xxx"></joint> :指定的关节
+7. <offset>...</offset>：补偿量、限位
 
    - 如果没有设置offset，开校准控制器校准后，电机会转到一个位置卡住，然后把那个位置设为零点
    - 如果有这个offset，那么会把原本的零点加上一个offset后的位置设置为新的零点
-
+```
 **Transmission决定了关节和执行器的映射关系**

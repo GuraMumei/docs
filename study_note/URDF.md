@@ -121,8 +121,10 @@ eg:
 ```<launch>
     <param name="robot_description" textfile="$(find package_name)/file_path/file_name.urdf" />
 	<!-- 其他内容 -->
-</launch>```
+</launch>
+```
 ### 2.直接在launch文件中以xacro的形式加载。
+
 ```
 <launch>
     <param name="robot_description" command="$(find xacro)/xacro $(find package_name)/file_path/file_name.xacro" />

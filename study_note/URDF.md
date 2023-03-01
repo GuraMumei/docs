@@ -112,10 +112,28 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 
 1. 编写xacro文件
 2. xacro文件集成到launch文件
+eg:
+
+### 1.先将xacro文件转换为urdf文件，然后集成urdf文件。
+在目标xacro文件目录下打开终端，输入命令
+```rosrun xacro xacro xxx_filename.xacro > xxx_filename.urdf```
+然后就可在launch文件中加载
+```<launch>
+    <param name="robot_description" textfile="$(find package_name)/file_path/file_name.urdf" />
+	<!-- 其他内容 -->
+</launch>```
+### 2.直接在launch文件中以xacro的形式加载。
+```
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro $(find package_name)/file_path/file_name.xacro" />
+	<!-- 其他内容 -->
+</launch>
+```
+
+---
+上述两种方法，加载urdf文件时为 textfile，加载xacro文件时为 command，需注意。
 
 ## 4.标签
-
-##  ![](/home/chen/Pictures/2022-04-06 12-44-15 的屏幕截图.png)
 
 1. about tag "<safety_controller>"
 

@@ -95,6 +95,10 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 ```
 <xacro:宏名称 参数=xxx />
 ```
+或
+```
+<宏名城 参数="my_box" />
+```
 
 ### 4. 文件包含
 

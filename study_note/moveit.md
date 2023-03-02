@@ -87,7 +87,8 @@ moveit::planning_interface::PlanningSceneInterface planning_scene_interface; //�
   test_constraints.orientation_constraints.push_back(ocm);
   group.setPathConstraints(test_constraints);  //添加到指定规划组
   
-`‵‵
+```
+
 ```
 const robot_state::JointModelGroup* joint_model_group =
       group.getCurrentState()->getJointModelGroup(gourp_name);  //获取一个指向机器人关节模型组的指针，包含了机器人所有关节的信息，包括名称、类型、上限、下限、速度和加速度等参数

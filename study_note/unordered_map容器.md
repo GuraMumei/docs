@@ -16,3 +16,6 @@
    - p. first（返回key）
 
    - p. second （返回key对应的value）
+   
+3. emplace() 
+   向容器中添加新键值对，效率比 insert() 方法高

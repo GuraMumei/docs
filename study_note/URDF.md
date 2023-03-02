@@ -198,3 +198,9 @@ eg:
    - 如果有这个offset，那么会把原本的零点加上一个offset后的位置设置为新的零点
 ```
 **Transmission决定了关节和执行器的映射关系**
+## 7. gazebo
+eg:  
+<gazebo reference="xxx">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  定义在gazebo中的颜色

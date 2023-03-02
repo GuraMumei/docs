@@ -200,7 +200,10 @@ eg:
 **Transmission决定了关节和执行器的映射关系**
 ## 7. gazebo
 eg:  
+```
 <gazebo reference="xxx">
     <material>Gazebo/Red</material>
-  </gazebo>
-  定义在gazebo中的颜色
+</gazebo>
+```
+
+定义在gazebo中的颜色

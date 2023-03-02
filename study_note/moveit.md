@@ -85,13 +85,17 @@ moveit::planning_interface::PlanningSceneInterface planning_scene_interface; //�
 
   moveit_msgs::Constraints test_constraints;
   test_constraints.orientation_constraints.push_back(ocm);
-  group_name.setPathConstraints(test_constraints);
-//添加到指定规划组
+  group.setPathConstraints(test_constraints);  //添加到指定规划组
+  
 `‵‵
+```
+const robot_state::JointModelGroup* joint_model_group =
+      group.getCurrentState()->getJointModelGroup(gourp_name);  //获取一个指向机器人关节模型组的指针，包含了机器人所有关节的信息，包括名称、类型、上限、下限、速度和加速度等参数
+```
 
 ```
 std::vector<double> joint_group_positions;
-  current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);  //获取当前关节位置
+  current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);  //当前机器人状态中给定关节模型组的关节位置复制到该数组中。
 ```
 
 ```
@@ -100,7 +104,7 @@ robot_state::RobotState start_state(*group_name.getCurrentState());
   
   ...
   start_state.setFromIK(joint_model_group, start_pose2);  //通过逆向运动学（IK）求解
-  move_group.setStartState(start_state);  //设置初始状态
+  group.setStartState(start_state);  //设置初始状态
 ```
 
 ```

@@ -61,7 +61,8 @@ rosrun moveit_setup_assistant moveit_setup_assistant
 ```
 
 ```
-  moveit::planning_interface::MoveGroup::Plan my_plan;  //进行运动规划，计算机器人移动到目标的运动轨迹，此时只是计算出轨迹，并不会控制机械臂运动
+  moveit::planning_interface::MoveGroup::Plan my_plan;  //进行运动规划，计算机器人移动到目标的运动轨迹，
+  此时只是计算出轨迹，并不会控制机械臂运动
   bool success = group.plan(my_plan)  //是否成功规划
   if(success)
     group.execute(my_plan);  //让机械臂按照规划的轨迹开始运动。
@@ -91,12 +92,14 @@ moveit::planning_interface::PlanningSceneInterface planning_scene_interface; //�
 
 ```
 const robot_state::JointModelGroup* joint_model_group =
-      group.getCurrentState()->getJointModelGroup(gourp_name);  //获取一个指向机器人关节模型组的指针，包含了机器人所有关节的信息，包括名称、类型、上限、下限、速度和加速度等参数
+      group.getCurrentState()->getJointModelGroup(gourp_name);  //获取一个指向机器人关节模型组的指针，包含了机器人所有关节的信息，
+      包括名称、类型、上限、下限、速度和加速度等参数
 ```
 
 ```
 std::vector<double> joint_group_positions;
-  current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);  //当前机器人状态中给定关节模型组的关节位置复制到该数组中。
+  current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);  
+  //当前机器人状态中给定关节模型组的关节位置复制到该数组中。
 ```
 
 ```

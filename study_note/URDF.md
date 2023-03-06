@@ -66,7 +66,7 @@ eg：<xacro:propetry name="wheel_radius" value=0.1 />；
 
 2. 定义：
 
-   eg: <xacro::property name="pi" value="3.14" />
+   eg: <xacro:property name="pi" value="3.14" />
 
 3. 调用：${属性}
 
